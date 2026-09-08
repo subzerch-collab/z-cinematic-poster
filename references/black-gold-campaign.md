@@ -1,6 +1,6 @@
 # Black-gold cinematic campaign guide
 
-Use this guide to turn the user's short request into a concrete image-generation brief. Preserve the user's stated scene, outfit, expression, and crop when provided; otherwise use the defaults below.
+Use this guide to turn the user's short request into a concrete image-generation brief. Treat identity as the only hard invariant from the source portrait. Preserve a scene, outfit, expression, or crop only when the user states it; otherwise rebuild them for the poster.
 
 ## Visual system
 
@@ -14,8 +14,10 @@ Use this guide to turn the user's short request into a concrete image-generation
 
 ## Identity, anatomy, and wardrobe
 
-- Preserve the person's distinctive face shape, proportions, eyes, brows, nose, lips, jaw, skin tone, age presentation, and hairstyle.
-- Expression and front, three-quarter, or profile angle may change naturally when the scene benefits.
+- Preserve the same person's distinctive face shape and proportions, eye shape and spacing, brows, nose, lips, jaw, skin tone, age presentation, hairline, and identifying features.
+- Do not inherit the source angle by default. A side-facing or lowered head may become front-facing, raised, three-quarter, profile, or differently posed when the composition benefits.
+- Re-render the head, neck, shoulders, and body as one coherent photographed pose. Never stretch, rotate, paste, or warp the original face.
+- Do not beautify the person into a different face. Avoid changing eye size, nose structure, lip shape, jaw shape, apparent age, ethnicity, or other recognition cues.
 - Keep the whole head and hair silhouette in frame with breathing room.
 - Default to a believable bust or half-body. Do not infer a full body from a head-only reference. Keep adult head, neck, shoulders, torso, arms, and hands proportionate.
 - Unless the user asks to preserve the original outfit, replace ordinary or scene-mismatched clothing with a coherent editorial wardrobe. Prefer tailored black formalwear, sculptural black silk, satin, velvet, or restrained black-gold couture. Keep fabric construction realistic, tasteful, and subordinate to the face.
@@ -35,8 +37,8 @@ When the user names a location or time, make it unmistakable through its materia
 
 Build a concise prompt containing only:
 
-1. the supplied image's role as the identity reference;
-2. vertical 3:4 portrait-led framing and supported body scope;
+1. the supplied image's role as the identity reference, with identity locked but original pose, gaze, head angle, crop, expression, clothing, and accessories unlocked;
+2. vertical 3:4 portrait-led framing, supported body scope, and a newly reconstructed scene-appropriate front, three-quarter, or profile pose;
 3. requested scene or the abstract poster default;
 4. scene-appropriate wardrobe replacement unless preservation is requested;
 5. shared amber-gold lighting and depth-aware integration;
@@ -48,4 +50,4 @@ Do not expose this expanded brief unless the user asks for the prompt. The user-
 
 ## Final check
 
-Confirm that the result is vertical 3:4, recognizable as the referenced person, naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks.
+Confirm that the result is vertical 3:4, unmistakably the same person after any angle or pose change, naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. If the face has drifted, reject and regenerate rather than presenting it as successful.

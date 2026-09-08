@@ -6,7 +6,7 @@ Turn a portrait into a polished black-gold cinematic poster while keeping the pe
 
 ## What it does
 
-- Preserves facial identity while allowing a scene-appropriate expression and pose.
+- Treats facial identity as the only hard invariant while allowing a new angle, expression, gaze, pose, crop, outfit, and removable accessories.
 - Defaults to a vertical 3:4 bust or half-body composition with natural anatomy.
 - Replaces ordinary clothing with refined black or black-gold editorial wardrobe unless preservation is requested.
 - Builds high-detail abstract or environmental backgrounds with amber-gold light, metallic texture, haze, fine particles, and soft partial double exposure.
@@ -31,7 +31,7 @@ The people shown below are fictional and were generated specifically for this re
 - An available image-generation tool that supports image references or identity-preserving edits.
 - A clear portrait works best. Only use images you have permission to process.
 
-Image fidelity, pixel dimensions, and exact likeness depend on the available image model and the quality of the source portrait. The skill requests the highest native quality supported but cannot create detail absent from a very small or heavily compressed source.
+Image fidelity, pixel dimensions, and exact likeness depend on the available image model and the quality of the source portrait. A side-facing or lowered head can be reconstructed as a front, raised, three-quarter, or profile view, but unseen facial geometry must be inferred from a single image; additional angles improve reliability. The skill treats identity drift as a failed result and requests regeneration instead of accepting it. It also requests the highest native quality supported but cannot create detail absent from a very small or heavily compressed source.
 
 ## Install
 

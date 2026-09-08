@@ -13,7 +13,8 @@ Create a text-free, vertical 3:4, person-led black-gold cinematic editorial post
 
 ## Defaults
 
-- Preserve the person's recognizable facial identity. Expression, pose, face angle, clothing, and removable accessories may change to suit the scene, but do not turn them into a different person.
+- Treat identity as the only non-negotiable invariant from the source portrait. Preserve the same person's facial structure and recognition cues: face shape and proportions, eye shape and spacing, brows, nose, lips, jawline, skin tone, apparent age, hairline, and distinguishing features. Do not preserve the original pose, crop, gaze, head tilt, expression, clothing, or accessories merely because they appear in the reference.
+- Freely reconstruct a scene-appropriate front, three-quarter, or profile view. A side-facing or lowered head may become front-facing, raised, turned, or differently posed. Re-render the head, neck, shoulders, and body as one coherent photographed pose; never stretch, rotate, paste, or warp the original face.
 - Adapt the wardrobe by default: replace ordinary, mismatched, or distracting clothing with a scene-appropriate black or black-gold editorial look using believable fabric and tailoring. Preserve the original outfit only when the user asks. Do not alter identity or anatomy while changing clothes.
 - Default to a natural bust or half-body. Never invent a full body from a head-only reference. Keep the whole head in frame with breathing room, and render believable adult proportions.
 - Build one coherent photographed or designed space: matching perspective, light direction, color grade, restrained haze, reflections, and depth-aware overlap. The subject must never look pasted onto the background.
@@ -26,9 +27,9 @@ Create a text-free, vertical 3:4, person-led black-gold cinematic editorial post
 
 ## Workflow
 
-Inspect the supplied image. Use it as the identity reference and use any supplied poster only as a style reference. Choose a front, three-quarter, or side-facing pose that fits the scene while preserving likeness.
+Inspect the supplied image as an identity reference, not as a pose or crop template. Use any supplied poster only as a style reference. Choose and reconstruct the front, three-quarter, or side-facing pose that best serves the scene while preserving the same person.
 
-For the visual treatment and scene-specific compositions, read [references/black-gold-campaign.md](references/black-gold-campaign.md). Build a concise generation prompt from the user's scene plus the defaults above. Before returning, check: vertical 3:4; full uncropped head; natural anatomy; unified subject/background lighting; a visible soft double-exposure effect; crisp high-detail foreground and mid-ground materials; and no identity drift.
+For the visual treatment and scene-specific compositions, read [references/black-gold-campaign.md](references/black-gold-campaign.md). Build a concise generation prompt from the user's scene plus the defaults above. Before returning, compare the generated face with the reference and check: unmistakably the same person; vertical 3:4; full uncropped head; natural anatomy; unified subject/background lighting; a visible soft double-exposure effect; and crisp high-detail foreground and mid-ground materials. If identity has drifted, do not accept the image: regenerate with simpler facial lighting and effects, stronger identity language, and the face occupying more of the frame. A single side-view may require inference for unseen features; keep the closest reliable scene-compatible angle or ask for an additional view instead of claiming an uncertain match.
 
 ## User-facing invocation
 
