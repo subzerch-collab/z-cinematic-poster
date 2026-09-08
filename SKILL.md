@@ -1,6 +1,6 @@
 ---
 name: z-cinematic-poster
-description: Turn a supplied portrait into a refined black-gold cinematic 3:4 poster or 1:1 avatar while preserving the same person's facial identity. Use for beauty, fashion, luxury, profile-image, or atmospheric editorial campaigns.
+description: Turn a supplied portrait into a refined black-gold cinematic image in a confirmed standard or custom aspect ratio while preserving the same person's facial identity. Use for beauty, fashion, luxury, profile-image, or atmospheric editorial campaigns.
 metadata:
   short-description: 将人物图做成高级感黑金海报或头像
 ---
@@ -9,7 +9,7 @@ metadata:
 
 Author: zero
 
-Create a text-free, person-led black-gold cinematic editorial image from the user's portrait. Default to a vertical 3:4 poster; switch to a square 1:1 avatar when the user says avatar, profile image, headshot, 头像, or 1:1. The user normally needs only to upload a portrait and name a scene, mood, campaign theme, or output mode. Treat all rules below as defaults; do not make the user repeat them.
+Create a text-free, person-led black-gold cinematic editorial image from the user's portrait. Treat all visual rules below as defaults; do not make the user repeat them. Do not choose the canvas ratio on the user's behalf.
 
 ## Defaults
 
@@ -26,20 +26,36 @@ Create a text-free, person-led black-gold cinematic editorial image from the use
 - Render at the highest native resolution and quality the image tool supports. Keep the background materially legible: foreground and mid-ground forms must show clean microtexture, clean contours, controlled highlights, and layered depth; soften only the far distance and optical-effect edges. Never turn most of the backdrop into low-detail fog, smeared bokeh, compression artifacts, or low-resolution mush.
 - Keep the scene detailed but subordinate to the person. No text, logo, watermark, border, or UI unless requested.
 
-## Output modes
+## Aspect-ratio gate
 
-- **Poster — default:** vertical 3:4, natural bust or half-body, with enough surrounding design to read as a finished campaign poster.
-- **Avatar — on request:** square 1:1, close portrait or head-and-shoulders composition. Keep the full hair silhouette, chin, neck, and enough shoulders visible for believable anatomy. Center the face inside a circular-crop-safe area, keep eyes near the upper-middle rather than the top edge, and let the head and shoulders dominate the frame. Use layered black-gold material, halo, mist, light, and particles close behind and around the person instead of distant scenery or empty margins. Keep optical effects away from the eyes, nose, and mouth so identity stays immediately readable.
+Establish the output ratio before generating anything. If the user has not already stated a ratio or exact dimensions, stop and ask this one concise question in the user's language, then wait for the answer:
+
+> 请选择输出比例：1:1 头像、3:4 竖版海报、9:16 全屏竖版、16:9 横版海报、4:3 横版海报，或自定义比例/尺寸。
+
+English:
+
+> Choose an output ratio: 1:1 avatar, 3:4 vertical poster, 9:16 full-screen vertical, 16:9 landscape poster, 4:3 landscape poster, or a custom ratio/size.
+
+Do not call the image-generation tool before the user selects. If the user already supplied one of these ratios or custom dimensions, do not ask again. If they request several ratios, generate one separate result per selected ratio unless they explicitly request a single adaptable master image.
+
+After selection, use the matching composition:
+
+- **1:1 avatar:** close portrait or head-and-shoulders composition. Keep the full hair silhouette, chin, neck, and enough shoulders visible for believable anatomy. Center the face inside a circular-crop-safe area and keep optical effects away from the eyes, nose, and mouth.
+- **3:4 vertical poster:** person-led bust or half-body editorial composition with enough surrounding design to read as a finished campaign poster.
+- **9:16 full-screen vertical:** mobile-first portrait composition with the subject dominant and key face, hair, and gold accents away from extreme top and bottom interface-safe edges. Do not stretch a 3:4 layout or fill the extra height with empty black space.
+- **16:9 landscape poster:** use a bust, half-body, or source-supported wider pose. Balance the opposite side with layered material, light, reflection, haze, or restrained afterimage rather than a blank scenic field.
+- **4:3 landscape poster:** use a tighter editorial landscape composition than 16:9, keeping the person and black-gold design in close visual dialogue without oversized empty margins.
+- **Custom:** honor the exact requested ratio. If the user gives pixel dimensions, preserve their ratio and request the closest or highest supported native resolution; never claim exact pixel dimensions when the image tool cannot provide them.
 
 ## Workflow
 
 Inspect the supplied image as an identity reference, not as a pose, crop, exposure, or color-grade template. First assess whether facial information is obscured by darkness, hard shadow, glare, noise, or color cast; separate stable recognition cues from these photographic defects. Use any supplied poster only as a style reference. Choose and reconstruct the front, three-quarter, or side-facing pose that best serves the scene while preserving the same person.
 
-For the visual treatment and scene-specific compositions, read [references/black-gold-campaign.md](references/black-gold-campaign.md). Build a concise generation prompt from the user's scene plus the defaults above. Before returning, compare the generated face with the reference and check: unmistakably the same person; the requested 3:4 or 1:1 aspect ratio; full uncropped head; natural anatomy; evenly readable facial illumination without crushed shadows; unified subject/background lighting; a visible soft double-exposure effect; and crisp high-detail foreground and mid-ground materials. For an avatar, also preview the composition as a circular crop and confirm the face, hair, chin, and key gold details remain intact. If identity has drifted or the corrected face is still dark, do not accept the image: regenerate with a softer brighter key, stronger fill, simpler facial effects, stronger identity language, and the face occupying more of the frame. A single side-view or severely obscured face may require inference for unseen features; keep the closest reliable scene-compatible angle or ask for an additional view instead of claiming an uncertain match.
+For the visual treatment and ratio-specific composition, read [references/black-gold-campaign.md](references/black-gold-campaign.md). Build a concise generation prompt from the user's scene plus the confirmed ratio and defaults above. Before returning, compare the generated face with the reference and check: unmistakably the same person; exact requested aspect ratio; full uncropped head; natural anatomy; evenly readable facial illumination without crushed shadows; unified subject/background lighting; a visible soft double-exposure effect; and crisp high-detail foreground and mid-ground materials. For a 1:1 avatar, also preview the composition as a circular crop and confirm the face, hair, chin, and key gold details remain intact. If identity has drifted or the corrected face is still dark, do not accept the image: regenerate with a softer brighter key, stronger fill, simpler facial effects, stronger identity language, and the face occupying more of the frame. A single side-view or severely obscured face may require inference for unseen features; keep the closest reliable scene-compatible angle or ask for an additional view instead of claiming an uncertain match.
 
 ## User-facing invocation
 
-The user can simply upload a portrait and write one short line, for example:
+The user can simply upload a portrait and invoke the skill. If they omit the ratio, ask the aspect-ratio question above before generating. For example:
 
 > Use $z-cinematic-poster to turn this portrait into a premium black-gold poster.
 
@@ -47,7 +63,7 @@ Chinese is equally supported:
 
 > 用 $z-cinematic-poster，把这张人物图做成高级感黑金海报。
 
-They may optionally add a location, outfit, or emotion. Everything else is handled by default.
+They may optionally add a ratio, location, outfit, or emotion. Everything else is handled by default.
 
 For a square avatar:
 

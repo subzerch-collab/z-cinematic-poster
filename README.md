@@ -1,6 +1,6 @@
 # z-cinematic-poster
 
-Turn a portrait into a polished black-gold cinematic poster or square avatar while keeping the person recognizable and naturally integrated into the design.
+Turn a portrait into a polished black-gold cinematic image in a confirmed standard or custom aspect ratio while keeping the person recognizable and naturally integrated into the design.
 
 **Author:** zero
 
@@ -8,7 +8,8 @@ Turn a portrait into a polished black-gold cinematic poster or square avatar whi
 
 - Treats facial identity as the only hard invariant while allowing a new angle, expression, gaze, pose, crop, outfit, and removable accessories.
 - Automatically corrects underexposure, hard facial shadows, backlight, color casts, and noise with clean, even, dimensional facial relighting instead of inheriting poor source lighting.
-- Defaults to a vertical 3:4 bust or half-body poster, and switches to a circular-crop-safe 1:1 head-and-shoulders avatar on request.
+- Asks for the output ratio before generation when none is supplied: 1:1, 3:4, 9:16, 16:9, 4:3, or custom.
+- Builds a ratio-specific composition instead of stretching, padding, or cropping one fixed layout.
 - Replaces ordinary clothing with refined black or black-gold editorial wardrobe unless preservation is requested.
 - Builds high-detail abstract or environmental backgrounds with amber-gold light, metallic texture, haze, fine particles, and soft partial double exposure.
 - Keeps the subject and background in one coherent light, perspective, color grade, and depth system.
@@ -46,7 +47,7 @@ The installed directory must contain `SKILL.md`, `agents/`, and `references/` at
 
 ## Use
 
-Upload a portrait, then invoke the skill with one sentence:
+Upload a portrait, then invoke the skill with one sentence. If no ratio is included, the skill first asks you to choose `1:1`, `3:4`, `9:16`, `16:9`, `4:3`, or a custom ratio/size, and waits before generating:
 
 ```text
 Use $z-cinematic-poster to turn this portrait into a premium black-gold poster.
@@ -76,6 +77,12 @@ Use $z-cinematic-poster to turn this portrait into a premium 1:1 black-gold avat
 用 $z-cinematic-poster，把这张人物图做成 1:1 高级感黑金头像。
 ```
 
+For a custom canvas:
+
+```text
+Use $z-cinematic-poster to make this portrait as a 2:3 black-gold campaign image.
+```
+
 You do not need to repeat the identity, anatomy, lighting, double-exposure, resolution, or integration rules; they are built into the skill.
 
 ## Repository structure
@@ -101,4 +108,4 @@ Released under the MIT License. See [LICENSE](LICENSE).
 
 ## 中文简介
 
-`z-cinematic-poster` 可将人物参考图转化为 3:4 高级黑金电影海报，或适合圆形裁切的 1:1 黑金头像。默认保持人物五官与整体相貌，自动调整合适的人体比例、姿态、服装、光影、柔和双曝和背景质感。用户通常只需上传人物图并输入一句调用语。
+`z-cinematic-poster` 可将人物参考图转化为高级黑金电影海报或头像。未指定比例时会先询问用户选择 1:1、3:4、9:16、16:9、4:3 或自定义比例，再按所选画布自动设计人物占比、姿态、服装、光影、柔和双曝和背景层次，同时保持人物五官与整体相貌。

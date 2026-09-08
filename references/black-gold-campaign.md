@@ -44,23 +44,21 @@ Use two or three material families: flowing metallic-gold ribbons, black satin d
 
 When the user names a location or time, make it unmistakable through its materials, horizon, weather, practical light, and reflections. Apply the black-gold visual system without replacing the requested place with a generic room. Keep scenery close and subordinate to the portrait rather than turning the result into a travel photograph.
 
-## Square avatar mode
+## Ratio-specific composition
 
-Use this mode when the user asks for an avatar, profile image, headshot, 头像, or 1:1 output.
-
-- Use a square 1:1 canvas with a close portrait or head-and-shoulders crop. Do not use a distant half-body composition.
-- Keep the full hair silhouette, chin, neck, and enough shoulders visible to avoid a floating or oversized head.
-- Keep the face centered within the inner circular safe area so the result still works when a platform crops the square into a circle.
-- Put detailed black-gold materials and atmospheric effects close to the silhouette. Use an incomplete halo, soft gold rim, localized mist, fine particles, flowing metallic curves, or a restrained afterimage to balance the frame.
-- Preserve crisp eyes and facial structure. Keep double exposure, light streaks, gold dust, and haze off the central eyes-nose-mouth recognition zone.
-- Avoid text, distant landscape emphasis, large empty corners, hard rings, badge-like borders, and symmetrical decorative frames.
+- **1:1:** use a close portrait or head-and-shoulders crop with the full hair silhouette, chin, neck, and enough shoulders visible. Keep the face in the circular safe area. Place detailed black-gold materials and atmosphere close to the silhouette; keep effects outside the eyes-nose-mouth zone.
+- **3:4:** use a bust or half-body vertical editorial layout. Surround the person with layered design without reducing them to a small figure.
+- **9:16:** use a mobile-first vertical layout. Keep important facial and decorative details away from extreme top and bottom edges, distribute authored material through the extra height, and avoid empty black extension.
+- **16:9:** use the horizontal direction to create visual dialogue between the person and designed light/material layers. If the person is offset, give the opposite side meaningful gold structure, reflections, atmosphere, or afterimage rather than generic scenery or vacancy.
+- **4:3:** use a compact horizontal bust or half-body layout with denser interaction between subject and design than 16:9.
+- **Custom:** design directly for the requested proportions instead of stretching or cropping a standard composition. When pixel dimensions are provided, preserve the ratio and use the highest supported native output size.
 
 ## Compact prompt assembly
 
 Build a concise prompt containing only:
 
 1. the supplied image's role as the identity reference, with identity locked but original pose, gaze, head angle, crop, expression, clothing, and accessories unlocked;
-2. the requested output mode: vertical 3:4 poster, or square 1:1 circular-crop-safe avatar; include the supported body scope and a newly reconstructed scene-appropriate front, three-quarter, or profile pose;
+2. the confirmed output ratio—1:1, 3:4, 9:16, 16:9, 4:3, or custom—plus its ratio-specific framing, supported body scope, and a newly reconstructed scene-appropriate front, three-quarter, or profile pose;
 3. requested scene or the abstract poster default;
 4. scene-appropriate wardrobe replacement unless preservation is requested;
 5. shared amber-gold lighting and depth-aware integration, with corrected soft key-and-fill facial illumination when the source is dark or uneven;
@@ -72,4 +70,4 @@ Do not expose this expanded brief unless the user asks for the prompt. The user-
 
 ## Final check
 
-Confirm that the result uses the requested 3:4 or 1:1 ratio, is unmistakably the same person after any angle or pose change, has an evenly exposed and naturally dimensional face, is naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted or remains crushed by shadow, reject and regenerate rather than presenting it as successful.
+Confirm that the result uses the user's confirmed ratio, is unmistakably the same person after any angle or pose change, has an evenly exposed and naturally dimensional face, is naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted, remains crushed by shadow, or uses the wrong ratio, reject and regenerate rather than presenting it as successful.
