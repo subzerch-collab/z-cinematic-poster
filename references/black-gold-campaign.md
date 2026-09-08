@@ -34,6 +34,18 @@ The portrait supplies identity, not exposure. When the source is dim, backlit, u
 - Unless the user asks to preserve the original outfit, replace ordinary or scene-mismatched clothing with a coherent editorial wardrobe. Prefer tailored black formalwear, sculptural black silk, satin, velvet, or restrained black-gold couture. Keep fabric construction realistic, tasteful, and subordinate to the face.
 - Removable accessories may be removed unless requested. Never remove permanent distinguishing features.
 
+## Beauty, skin, and makeup
+
+Use a polished editorial finish by default without asking the user for another setting. If they name a makeup style or intensity, follow it.
+
+- Refine temporary blemishes, patchy redness, excess shine, under-eye fatigue, dry lips, and stray facial hairs while retaining pores, fine skin texture, natural tonal variation, and age-appropriate detail.
+- Preserve complexion and stable identifying features such as moles, freckles, scars, eyelid structure, smile lines, and hairline unless the user explicitly requests removal.
+- Use a natural-to-polished makeup presence appropriate to the person's styling and campaign mood: clean base, groomed brows, defined eyes and lashes, subtle contour and highlight, healthy cheek tone, and finished lips. Makeup should be visible enough to feel intentional but not costume-like unless requested.
+- For a sharper or more handsome treatment, favor clean matte-to-satin skin, controlled brow and eye definition, understated lips, tidy facial hair when present, sculpting through light, and precise hair grooming.
+- For a softer or more glamorous treatment, favor luminous satin skin, refined eye and lash definition, restrained contour, blush and highlight, harmonized lip color, and polished hair.
+- Do not assume or change gender presentation. Choose the finish from the source styling and requested mood, and allow the user to override it.
+- Never enlarge eyes, shrink the nose, narrow the jaw, inflate lips, erase all pores, whiten skin, de-age aggressively, or reshape the face to create attractiveness.
+
 ## Background modes
 
 ### Abstract poster — default
@@ -62,12 +74,13 @@ Build a concise prompt containing only:
 3. requested scene or the abstract poster default;
 4. scene-appropriate wardrobe replacement unless preservation is requested;
 5. shared amber-gold lighting and depth-aware integration, with corrected soft key-and-fill facial illumination when the source is dark or uneven;
-6. one soft partial double exposure plus restrained gold accents;
-7. crisp face and high-detail foreground/mid-ground; and
-8. exclusions: no text, logo, watermark, identity drift, duplicate face, pasted cutout, anatomy distortion, rigid frame, global blur, or low-resolution background.
+6. polished editorial skin, grooming, and scene-appropriate makeup that improve attractiveness without changing facial geometry or identifying features;
+7. one soft partial double exposure plus restrained gold accents;
+8. crisp face and high-detail foreground/mid-ground; and
+9. exclusions: no text, logo, watermark, identity drift, duplicate face, pasted cutout, anatomy distortion, plastic skin, face reshaping, rigid frame, global blur, or low-resolution background.
 
 Do not expose this expanded brief unless the user asks for the prompt. The user-facing invocation should remain one sentence.
 
 ## Final check
 
-Confirm that the result uses the user's confirmed ratio, is unmistakably the same person after any angle or pose change, has an evenly exposed and naturally dimensional face, is naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted, remains crushed by shadow, or uses the wrong ratio, reject and regenerate rather than presenting it as successful.
+Confirm that the result uses the user's confirmed ratio, is unmistakably the same person after any angle or pose change, has an evenly exposed and naturally dimensional face, shows refined real-looking skin and intentional makeup or grooming, is naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted, remains crushed by shadow, looks over-retouched, or uses the wrong ratio, reject and regenerate rather than presenting it as successful.

@@ -1,7 +1,7 @@
 interface:
   display_name: "Black-Gold Portrait Campaign"
-  short_description: "Create identity-preserving black-gold art in chosen ratios"
-  default_prompt: "Use $z-cinematic-poster to recompose this portrait as premium black-gold artwork, asking me to choose the aspect ratio first if I have not provided one."
+  short_description: "Create polished identity-preserving black-gold portrait art"
+  default_prompt: "Use $z-cinematic-poster to create polished black-gold portrait artwork with refined skin and makeup while preserving the same person, asking me to choose the aspect ratio first if needed."
 
 policy:
   allow_implicit_invocation: true
