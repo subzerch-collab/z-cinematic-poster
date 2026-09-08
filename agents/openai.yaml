@@ -1,0 +1,7 @@
+interface:
+  display_name: "Black-Gold Cinematic Poster"
+  short_description: "Transform portraits into integrated black-gold poster art"
+  default_prompt: "Use $z-cinematic-poster to turn this portrait into a premium black-gold cinematic poster."
+
+policy:
+  allow_implicit_invocation: true
