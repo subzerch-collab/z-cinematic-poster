@@ -5,7 +5,7 @@ metadata:
   short-description: 将人物图做成高级感黑金海报或头像
 ---
 
-# Cinematic Black-Gold Poster
+# z-cinematic-poster
 
 Author: zero
 

@@ -1,5 +1,5 @@
 interface:
-  display_name: "Black-Gold Portrait Campaign"
+  display_name: "z-cinematic-poster"
   short_description: "Create polished identity-preserving black-gold portrait art"
   default_prompt: "Use $z-cinematic-poster to create polished black-gold portrait artwork with refined skin and makeup while preserving the same person, asking me to choose the aspect ratio first if needed."
 
