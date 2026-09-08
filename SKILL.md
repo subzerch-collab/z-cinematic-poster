@@ -39,7 +39,7 @@ English:
 
 > Choose an output ratio: 1:1 avatar, 3:4 vertical poster, 9:16 full-screen vertical, 16:9 landscape poster, 4:3 landscape poster, or a custom ratio/size.
 
-Do not call the image-generation tool before the user selects. If the user already supplied one of these ratios or custom dimensions, do not ask again. Deliver exactly one final image per invocation. This one-image rule limits presentation only; it does not limit internal generation, comparison, or refinement. Privately create as many drafts, alternative candidates, and localized repair passes as are useful within the available tool and time budget. Never accept the first pass merely to avoid another generation call. Do not return a grid, contact sheet, alternates, drafts, or retry images. If the user requests several ratios, ask which single ratio to make first.
+Do not call the image-generation tool before the user selects. If the user already supplied one of these ratios or custom dimensions, do not ask again. Deliver exactly one final image per invocation. This one-image rule limits final presentation only; it does not limit how many drafts, candidates, variations, batches, comparisons, or repair passes may be created privately. Use whichever internal generation strategy best supports quality, but never accept the first pass merely to avoid refinement. If the user requests several ratios, ask which single ratio to make first.
 
 After selection, use the matching composition:
 
@@ -55,12 +55,13 @@ After selection, use the matching composition:
 Treat every generated or edited image as private working state until all identity, expression, skin, under-eye, makeup, sharpness, composition, and ratio checks pass.
 
 - A first pass is an internal candidate, never an automatic deliverable. Inspect it, identify concrete failures, and generate another candidate or perform a targeted edit whenever doing so can materially improve the result.
-- Internal draft count and final display count are separate. Multiple drafts and repair passes are allowed; the user must still receive only one image: the highest-quality candidate that passes every check.
+- Internal draft count and final display count are separate. Any number of private drafts, variations, comparisons, and repair passes may be used. The user must still receive one image: the highest-quality candidate that passes every check.
 - Do not embed, render, link, attach, or otherwise expose the first-pass image, repair candidates, rejected variants, before/after pairs, or intermediate file paths in commentary, tool output forwarded to the user, or the final response.
 - Keep generation and edit results inside a deferred or private execution path. In Codex code-mode, retain each result object or file path for inspection but do not call `generatedImage(result)`, emit an image block, forward a data URL, or use any equivalent display helper for intermediate calls.
 - Compare viable candidates against the source identity and full acceptance checklist. Select the best accepted result, not simply the first or most recently generated result.
-- After all generation, repair, comparison, and validation steps, invoke the image-display or attachment mechanism exactly once with only the selected best result. The response must contain one image card, not two visually similar cards.
-- If a tool normally surfaces each generation, use its deferred, private, or code-mode result path so intermediate calls remain working state. Do not collapse the refinement process into one call merely to satisfy the one-image presentation rule.
+- If an image-tool response contains multiple images, keep the complete set private for comparison. Select one best passing candidate and extract or materialize that candidate as its own single-image object or file before presentation.
+- After all generation, repair, comparison, and validation steps, invoke the image-display or attachment mechanism exactly once with only that selected single-image object or file. Never pass the original result array, candidate collection, batch result, or multi-image object to the display mechanism. The response must contain exactly one image card and one image asset—not two or three similar cards.
+- If a tool normally surfaces each generation, use its deferred, private, or code-mode result path so all candidate output remains working state. Do not reduce the refinement process merely to avoid internal candidates.
 - Do not show the source portrait beside the result unless the user explicitly asks for a comparison. Provide only one final download link if a link is needed.
 
 ## Workflow
