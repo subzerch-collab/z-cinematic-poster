@@ -8,7 +8,7 @@ Turn a portrait into a polished black-gold cinematic image in a confirmed standa
 
 - Treats facial identity as the only hard invariant while allowing a new angle, expression, gaze, pose, crop, outfit, and removable accessories.
 - Automatically corrects underexposure, hard facial shadows, backlight, color casts, and noise with clean, even, dimensional facial relighting instead of inheriting poor source lighting.
-- Adds polished skin retouching, scene-appropriate makeup, refined hair and grooming, and a more attractive editorial presence without reshaping the face or erasing identifying features.
+- Applies a visible beauty-campaign finish: bright translucent rosy skin, smooth hydrated sheen, removal of dark lines, spots, freckles, acne and blemish marks, refined makeup, polished hair, and more attractive editorial presence without reshaping the face.
 - Asks for the output ratio before generation when none is supplied: 1:1, 3:4, 9:16, 16:9, 4:3, or custom.
 - Builds a ratio-specific composition instead of stretching, padding, or cropping one fixed layout.
 - Replaces ordinary clothing with refined black or black-gold editorial wardrobe unless preservation is requested.
