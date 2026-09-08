@@ -1,13 +1,13 @@
 # z-cinematic-poster
 
-Turn a portrait into a polished black-gold cinematic poster while keeping the person recognizable and naturally integrated into the design.
+Turn a portrait into a polished black-gold cinematic poster or square avatar while keeping the person recognizable and naturally integrated into the design.
 
 **Author:** zero
 
 ## What it does
 
 - Treats facial identity as the only hard invariant while allowing a new angle, expression, gaze, pose, crop, outfit, and removable accessories.
-- Defaults to a vertical 3:4 bust or half-body composition with natural anatomy.
+- Defaults to a vertical 3:4 bust or half-body poster, and switches to a circular-crop-safe 1:1 head-and-shoulders avatar on request.
 - Replaces ordinary clothing with refined black or black-gold editorial wardrobe unless preservation is requested.
 - Builds high-detail abstract or environmental backgrounds with amber-gold light, metallic texture, haze, fine particles, and soft partial double exposure.
 - Keeps the subject and background in one coherent light, perspective, color grade, and depth system.
@@ -63,6 +63,18 @@ Optional details can be added naturally:
 Use $z-cinematic-poster with a rain-wet city at blue hour and a tailored formal outfit.
 ```
 
+For a square avatar:
+
+```text
+Use $z-cinematic-poster to turn this portrait into a premium 1:1 black-gold avatar.
+```
+
+中文：
+
+```text
+用 $z-cinematic-poster，把这张人物图做成 1:1 高级感黑金头像。
+```
+
 You do not need to repeat the identity, anatomy, lighting, double-exposure, resolution, or integration rules; they are built into the skill.
 
 ## Repository structure
@@ -88,4 +100,4 @@ Released under the MIT License. See [LICENSE](LICENSE).
 
 ## 中文简介
 
-`z-cinematic-poster` 可将人物参考图转化为 3:4 高级黑金电影海报。默认保持人物五官与整体相貌，自动调整合适的半身比例、姿态、服装、光影、柔和双曝和背景质感。用户通常只需上传人物图并输入一句调用语。
+`z-cinematic-poster` 可将人物参考图转化为 3:4 高级黑金电影海报，或适合圆形裁切的 1:1 黑金头像。默认保持人物五官与整体相貌，自动调整合适的人体比例、姿态、服装、光影、柔和双曝和背景质感。用户通常只需上传人物图并输入一句调用语。

@@ -33,12 +33,23 @@ Use two or three material families: flowing metallic-gold ribbons, black satin d
 
 When the user names a location or time, make it unmistakable through its materials, horizon, weather, practical light, and reflections. Apply the black-gold visual system without replacing the requested place with a generic room. Keep scenery close and subordinate to the portrait rather than turning the result into a travel photograph.
 
+## Square avatar mode
+
+Use this mode when the user asks for an avatar, profile image, headshot, 头像, or 1:1 output.
+
+- Use a square 1:1 canvas with a close portrait or head-and-shoulders crop. Do not use a distant half-body composition.
+- Keep the full hair silhouette, chin, neck, and enough shoulders visible to avoid a floating or oversized head.
+- Keep the face centered within the inner circular safe area so the result still works when a platform crops the square into a circle.
+- Put detailed black-gold materials and atmospheric effects close to the silhouette. Use an incomplete halo, soft gold rim, localized mist, fine particles, flowing metallic curves, or a restrained afterimage to balance the frame.
+- Preserve crisp eyes and facial structure. Keep double exposure, light streaks, gold dust, and haze off the central eyes-nose-mouth recognition zone.
+- Avoid text, distant landscape emphasis, large empty corners, hard rings, badge-like borders, and symmetrical decorative frames.
+
 ## Compact prompt assembly
 
 Build a concise prompt containing only:
 
 1. the supplied image's role as the identity reference, with identity locked but original pose, gaze, head angle, crop, expression, clothing, and accessories unlocked;
-2. vertical 3:4 portrait-led framing, supported body scope, and a newly reconstructed scene-appropriate front, three-quarter, or profile pose;
+2. the requested output mode: vertical 3:4 poster, or square 1:1 circular-crop-safe avatar; include the supported body scope and a newly reconstructed scene-appropriate front, three-quarter, or profile pose;
 3. requested scene or the abstract poster default;
 4. scene-appropriate wardrobe replacement unless preservation is requested;
 5. shared amber-gold lighting and depth-aware integration;
@@ -50,4 +61,4 @@ Do not expose this expanded brief unless the user asks for the prompt. The user-
 
 ## Final check
 
-Confirm that the result is vertical 3:4, unmistakably the same person after any angle or pose change, naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. If the face has drifted, reject and regenerate rather than presenting it as successful.
+Confirm that the result uses the requested 3:4 or 1:1 ratio, is unmistakably the same person after any angle or pose change, naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted, reject and regenerate rather than presenting it as successful.

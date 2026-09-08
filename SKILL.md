@@ -1,15 +1,15 @@
 ---
 name: z-cinematic-poster
-description: Turn a supplied portrait into a refined 3:4 black-gold cinematic poster while preserving the person's likeness. Use for beauty, fashion, luxury, or atmospheric editorial campaigns.
+description: Turn a supplied portrait into a refined black-gold cinematic 3:4 poster or 1:1 avatar while preserving the same person's facial identity. Use for beauty, fashion, luxury, profile-image, or atmospheric editorial campaigns.
 metadata:
-  short-description: 将人物图做成高级感黑金电影海报
+  short-description: 将人物图做成高级感黑金海报或头像
 ---
 
 # Cinematic Black-Gold Poster
 
 Author: zero
 
-Create a text-free, vertical 3:4, person-led black-gold cinematic editorial poster from the user's portrait. The user normally needs only to upload a portrait and name a scene, mood, or campaign theme. Treat all rules below as defaults; do not make the user repeat them.
+Create a text-free, person-led black-gold cinematic editorial image from the user's portrait. Default to a vertical 3:4 poster; switch to a square 1:1 avatar when the user says avatar, profile image, headshot, 头像, or 1:1. The user normally needs only to upload a portrait and name a scene, mood, campaign theme, or output mode. Treat all rules below as defaults; do not make the user repeat them.
 
 ## Defaults
 
@@ -25,11 +25,16 @@ Create a text-free, vertical 3:4, person-led black-gold cinematic editorial post
 - Render at the highest native resolution and quality the image tool supports. Keep the background materially legible: foreground and mid-ground forms must show clean microtexture, clean contours, controlled highlights, and layered depth; soften only the far distance and optical-effect edges. Never turn most of the backdrop into low-detail fog, smeared bokeh, compression artifacts, or low-resolution mush.
 - Keep the scene detailed but subordinate to the person. No text, logo, watermark, border, or UI unless requested.
 
+## Output modes
+
+- **Poster — default:** vertical 3:4, natural bust or half-body, with enough surrounding design to read as a finished campaign poster.
+- **Avatar — on request:** square 1:1, close portrait or head-and-shoulders composition. Keep the full hair silhouette, chin, neck, and enough shoulders visible for believable anatomy. Center the face inside a circular-crop-safe area, keep eyes near the upper-middle rather than the top edge, and let the head and shoulders dominate the frame. Use layered black-gold material, halo, mist, light, and particles close behind and around the person instead of distant scenery or empty margins. Keep optical effects away from the eyes, nose, and mouth so identity stays immediately readable.
+
 ## Workflow
 
 Inspect the supplied image as an identity reference, not as a pose or crop template. Use any supplied poster only as a style reference. Choose and reconstruct the front, three-quarter, or side-facing pose that best serves the scene while preserving the same person.
 
-For the visual treatment and scene-specific compositions, read [references/black-gold-campaign.md](references/black-gold-campaign.md). Build a concise generation prompt from the user's scene plus the defaults above. Before returning, compare the generated face with the reference and check: unmistakably the same person; vertical 3:4; full uncropped head; natural anatomy; unified subject/background lighting; a visible soft double-exposure effect; and crisp high-detail foreground and mid-ground materials. If identity has drifted, do not accept the image: regenerate with simpler facial lighting and effects, stronger identity language, and the face occupying more of the frame. A single side-view may require inference for unseen features; keep the closest reliable scene-compatible angle or ask for an additional view instead of claiming an uncertain match.
+For the visual treatment and scene-specific compositions, read [references/black-gold-campaign.md](references/black-gold-campaign.md). Build a concise generation prompt from the user's scene plus the defaults above. Before returning, compare the generated face with the reference and check: unmistakably the same person; the requested 3:4 or 1:1 aspect ratio; full uncropped head; natural anatomy; unified subject/background lighting; a visible soft double-exposure effect; and crisp high-detail foreground and mid-ground materials. For an avatar, also preview the composition as a circular crop and confirm the face, hair, chin, and key gold details remain intact. If identity has drifted, do not accept the image: regenerate with simpler facial lighting and effects, stronger identity language, and the face occupying more of the frame. A single side-view may require inference for unseen features; keep the closest reliable scene-compatible angle or ask for an additional view instead of claiming an uncertain match.
 
 ## User-facing invocation
 
@@ -42,3 +47,11 @@ Chinese is equally supported:
 > 用 $z-cinematic-poster，把这张人物图做成高级感黑金海报。
 
 They may optionally add a location, outfit, or emotion. Everything else is handled by default.
+
+For a square avatar:
+
+> Use $z-cinematic-poster to turn this portrait into a premium 1:1 black-gold avatar.
+
+Chinese:
+
+> 用 $z-cinematic-poster，把这张人物图做成 1:1 高级感黑金头像。

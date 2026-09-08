@@ -1,7 +1,7 @@
 interface:
-  display_name: "Black-Gold Cinematic Poster"
-  short_description: "Recompose portraits as black-gold art while preserving identity"
-  default_prompt: "Use $z-cinematic-poster to recompose this portrait as a premium black-gold poster while preserving the same person."
+  display_name: "Black-Gold Poster & Avatar"
+  short_description: "Create identity-preserving black-gold posters and avatars"
+  default_prompt: "Use $z-cinematic-poster to recompose this portrait as a premium black-gold poster or 1:1 avatar while preserving the same person."
 
 policy:
   allow_implicit_invocation: true
