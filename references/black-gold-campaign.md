@@ -47,10 +47,25 @@ Use a visible beauty-campaign finish by default without asking the user for anot
 - Do not assume or change gender presentation. Choose the finish from the source styling and requested mood, and allow the user to override it.
 - Never enlarge eyes, shrink the nose, narrow the jaw, inflate lips, erase all microtexture, change ethnicity, de-age aggressively, or reshape the face to create attractiveness.
 
+### Under-eye repair — mandatory
+
+Treat the area from each lower lash line to the upper cheek as a dedicated retouch zone.
+
+- Preserve the eye opening, lower lash line, eyelid structure, and natural eye shape, but fully remove tear troughs, eye bags, tear tracks, dark circles, brown or orange shadow bands, fine dark creases, dry texture, and mottled pigment beneath the eyes.
+- Use soft peach-rose color correction and low-contrast dodge-and-burn to create a clean, even transition from lower eyelid to cheek. The zone should be softly bright and rested, never gray, brown, orange, hollow, swollen, or over-highlighted.
+- Keep the lower lashes and iris edges crisp, but do not sharpen pores, creases, or skin grain beneath the eyes.
+- Match both eyes in brightness and skin finish while respecting natural perspective. No repeated wrinkle pattern, denoise smear, painted patch, or bright concealer stripe.
+
+### Skin-frequency balance
+
+- Smooth low-frequency tone and color aggressively enough to remove blotchiness, stains, shadows, and uneven patches.
+- Retain only ultra-fine, uniform high-frequency texture so the skin reads as premium beauty photography. Do not preserve coarse pores or flaw-shaped texture from the source.
+- Use gentle local contrast on eyes, brows, lips, and hair—not across cheeks, forehead, or under-eye skin.
+
 ## Face sharpness
 
 - Make the primary face and eyes the sharpest plane in the image. Resolve clean irises, catchlights, eyelashes, brow hairs, nostril edges, lip contours, and nearby hair strands.
-- Smooth color and surface defects without blurring facial edges or smearing high-frequency detail.
+- Smooth color and surface defects without blurring facial landmarks. Do not use sharpening or clarity on cheeks, forehead, nose skin, or under-eye skin.
 - Keep motion blur, soft focus, diffusion, bloom, glow, haze, double exposure, and light streaks entirely outside the central face. They may touch only the outer hair, silhouette, clothing edge, background, or secondary afterimage.
 - Reject any result where the face looks lower-resolution, softer, more smeared, or less detailed than the surrounding design.
 
@@ -82,14 +97,14 @@ Build a concise prompt containing only:
 3. requested scene or the abstract poster default;
 4. scene-appropriate wardrobe replacement unless preservation is requested;
 5. clean neutral-warm beauty light and soft rosy fill on the central face, with amber-gold reserved mainly for rim, environment, and depth-aware integration;
-6. visibly bright, milky-translucent, smooth, hydrated skin with a soft rosy undertone and controlled dewy sheen; fully remove tear tracks, dark lines, spots, freckles, acne and blemish marks, surface scars, dullness, and under-eye darkness while preserving facial geometry and identity;
+6. visibly bright, milky-translucent, smooth, hydrated skin with a soft rosy undertone and controlled dewy sheen; fully remove tear tracks, tear troughs, eye bags, orange-brown under-eye bands, dark creases, spots, freckles, acne and blemish marks, surface scars, dullness, and under-eye darkness while preserving facial geometry and identity;
 7. visibly intentional beauty-campaign makeup with shaped brows, defined eyes and lashes, blush, subtle contour and highlight, and softly colored glossy lips;
 8. one soft partial double exposure plus restrained gold accents, all kept outside the central face;
-9. tack-sharp face and eyes with clean iris, lash, brow, lip, and hair detail, plus high-detail foreground and mid-ground; and
+9. tack-sharp eyes and facial landmarks with clean iris, lash, brow, lip, and hair detail, but smooth unsharpened facial skin, plus high-detail foreground and mid-ground; and
 10. exclusions: no text, logo, watermark, identity drift, duplicate face, pasted cutout, anatomy distortion, dull or muddy face, tear tracks, visible dark lines or blemish marks, bare-face appearance, dry skin, waxy skin, facial blur, denoise smearing, face reshaping, rigid frame, global blur, or low-resolution background.
 
 Do not expose this expanded brief unless the user asks for the prompt. The user-facing invocation should remain one sentence.
 
 ## Final check
 
-Confirm that exactly one final image is delivered; it uses the user's confirmed ratio; it is unmistakably the same person; its central face and eyes are tack-sharp; its skin is visibly brighter, translucent, rosy, smooth, and hydrated; tear tracks, dark lines, spots, acne marks, under-eye darkness, and blemish marks are absent; makeup is clearly visible; anatomy and wardrobe are coherent; the person is integrated into one detailed black-gold space; and all double exposure, bloom, haze, and glow stay outside the central face. For a 1:1 avatar, also confirm it survives a circular crop. If any condition fails, reject the candidate and return only the single best corrected result.
+Confirm that exactly one final image is delivered; it uses the user's confirmed ratio; it is unmistakably the same person; its eyes and facial landmarks are crisp while the skin is smoothly resolved; its complexion is brighter, translucent, rosy, and hydrated; both under-eye zones transition cleanly into the cheeks with no tear trough, eye bag, tear track, brown-orange band, dark crease, or rough texture; other spots and blemish marks are absent; makeup is clearly visible; anatomy and wardrobe are coherent; the person is integrated into one detailed black-gold space; and all double exposure, bloom, haze, and glow stay outside the central face. If the face fails, perform a localized identity-preserving retouch pass and return only the final corrected image.

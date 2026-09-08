@@ -10,6 +10,7 @@ Turn a portrait into a polished black-gold cinematic image in a confirmed standa
 - Automatically corrects underexposure, hard facial shadows, backlight, color casts, and noise with clean, even, dimensional facial relighting instead of inheriting poor source lighting.
 - Applies a visible beauty-campaign finish: bright translucent rosy skin, smooth hydrated sheen, complete removal of tear tracks, dark lines, spots, freckles, acne and blemish marks, clearly visible makeup, and polished hair without reshaping the face.
 - Keeps the central face and eyes tack-sharp while restricting blur, haze, bloom, glow, and double exposure to the outer silhouette and background.
+- Runs a dedicated under-eye quality check and localized retouch pass to remove tear troughs, eye bags, dark or orange-brown bands, fine creases, and rough texture without changing eye shape.
 - Delivers exactly one final image per invocation—never a grid, contact sheet, alternate set, or visible retry batch.
 - Asks for the output ratio before generation when none is supplied: 1:1, 3:4, 9:16, 16:9, 4:3, or custom.
 - Builds a ratio-specific composition instead of stretching, padding, or cropping one fixed layout.
