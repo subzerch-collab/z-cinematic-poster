@@ -12,6 +12,17 @@ Use this guide to turn the user's short request into a concrete image-generation
 - **Resolution:** keep the primary face, hair, fabric, foreground, and mid-ground sharp with clean microtexture. Soften only the far distance and optical transitions. Avoid low-detail fog, smeared bokeh, compression artifacts, or global blur.
 - **Density:** build three depth planes and keep quiet areas authored with texture, reflections, light, or material detail. No large featureless black rectangle.
 
+## Facial relighting and source repair
+
+The portrait supplies identity, not exposure. When the source is dim, backlit, uneven, strongly color-cast, noisy, or partly hidden by hard shadow:
+
+- Reconstruct the face under clean studio-quality light rather than reproducing the source defect.
+- Use a soft frontal or three-quarter amber key with a broad neutral-warm fill. Both eyes, cheeks, the nose, lips, and jaw should remain readable.
+- Keep gentle modeled shadow under the cheekbones, nose, and jaw so the face stays dimensional; avoid flat front-flash lighting.
+- Recover a natural skin tone and restrained catchlights without whitening the person, changing complexion, over-smoothing pores, or inventing new facial structure.
+- Keep atmospheric darkness, double exposure, haze, and gold effects around the hair and outer silhouette. Do not let them darken or obscure the central face.
+- If the reference contains too little reliable facial information, prefer the closest supported angle or request another portrait rather than hallucinating identity.
+
 ## Identity, anatomy, and wardrobe
 
 - Preserve the same person's distinctive face shape and proportions, eye shape and spacing, brows, nose, lips, jaw, skin tone, age presentation, hairline, and identifying features.
@@ -52,7 +63,7 @@ Build a concise prompt containing only:
 2. the requested output mode: vertical 3:4 poster, or square 1:1 circular-crop-safe avatar; include the supported body scope and a newly reconstructed scene-appropriate front, three-quarter, or profile pose;
 3. requested scene or the abstract poster default;
 4. scene-appropriate wardrobe replacement unless preservation is requested;
-5. shared amber-gold lighting and depth-aware integration;
+5. shared amber-gold lighting and depth-aware integration, with corrected soft key-and-fill facial illumination when the source is dark or uneven;
 6. one soft partial double exposure plus restrained gold accents;
 7. crisp face and high-detail foreground/mid-ground; and
 8. exclusions: no text, logo, watermark, identity drift, duplicate face, pasted cutout, anatomy distortion, rigid frame, global blur, or low-resolution background.
@@ -61,4 +72,4 @@ Do not expose this expanded brief unless the user asks for the prompt. The user-
 
 ## Final check
 
-Confirm that the result uses the requested 3:4 or 1:1 ratio, is unmistakably the same person after any angle or pose change, naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted, reject and regenerate rather than presenting it as successful.
+Confirm that the result uses the requested 3:4 or 1:1 ratio, is unmistakably the same person after any angle or pose change, has an evenly exposed and naturally dimensional face, is naturally proportioned, appropriately dressed, integrated into one coherent black-gold space, visibly but softly double-exposed, detailed rather than muddy, and free of text or watermarks. For a 1:1 avatar, also confirm it survives a circular crop without losing the face, hair, chin, or defining gold details. If the face has drifted or remains crushed by shadow, reject and regenerate rather than presenting it as successful.

@@ -7,6 +7,7 @@ Turn a portrait into a polished black-gold cinematic poster or square avatar whi
 ## What it does
 
 - Treats facial identity as the only hard invariant while allowing a new angle, expression, gaze, pose, crop, outfit, and removable accessories.
+- Automatically corrects underexposure, hard facial shadows, backlight, color casts, and noise with clean, even, dimensional facial relighting instead of inheriting poor source lighting.
 - Defaults to a vertical 3:4 bust or half-body poster, and switches to a circular-crop-safe 1:1 head-and-shoulders avatar on request.
 - Replaces ordinary clothing with refined black or black-gold editorial wardrobe unless preservation is requested.
 - Builds high-detail abstract or environmental backgrounds with amber-gold light, metallic texture, haze, fine particles, and soft partial double exposure.
