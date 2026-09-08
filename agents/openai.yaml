@@ -1,7 +1,7 @@
 interface:
   display_name: "z-cinematic-poster"
   short_description: "Create polished identity-preserving black-gold portrait art"
-  default_prompt: "Use $z-cinematic-poster to create polished black-gold portrait artwork with refined skin and makeup while preserving the same person, asking me to choose the aspect ratio first if needed."
+  default_prompt: "Use $z-cinematic-poster to create one polished black-gold portrait with one image-generation call, refined skin and makeup, and the same person's identity; ask me to choose the aspect ratio first if needed."
 
 policy:
   allow_implicit_invocation: true

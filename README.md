@@ -11,8 +11,8 @@ Turn a portrait into a polished black-gold cinematic image in a confirmed standa
 - Automatically corrects underexposure, hard facial shadows, backlight, color casts, and noise with clean, even, dimensional facial relighting instead of inheriting poor source lighting.
 - Applies a visible beauty-campaign finish: bright translucent rosy skin, silky continuous gradients, hydrated sheen, no recognizable pores or facial grain, and zero-residue removal of every visible red/brown spot, freckle, acne mark, pigmentation patch, tear track, and dark line, plus clearly visible makeup and polished hair without reshaping the face.
 - Keeps the central face and eyes tack-sharp while restricting blur, haze, bloom, glow, and double exposure to the outer silhouette and background.
-- Runs a dedicated under-eye quality check and localized retouch pass to remove tear troughs, eye bags, dark or orange-brown bands, fine creases, and rough texture without changing eye shape.
-- Allows any number of private drafts, candidates, batches, comparisons, and targeted repairs. After full review, it extracts the single best candidate and passes only that standalone image to the display mechanism once—never the complete candidate set, three cards, a grid, before/after pair, or visible retry batch.
+- Includes dedicated under-eye requirements in the refined-final generation brief to remove tear troughs, eye bags, dark or orange-brown bands, fine creases, and rough texture without changing eye shape.
+- Uses a single-call refined-final workflow in Codex: it completes source analysis and all quality requirements before generation, requests one output, calls the image tool exactly once, and displays that sole result once. This prevents visible first drafts, retries, batches, alternatives, and duplicate image cards.
 - Asks for the output ratio before generation when none is supplied: 1:1, 3:4, 9:16, 16:9, 4:3, or custom.
 - Builds a ratio-specific composition instead of stretching, padding, or cropping one fixed layout.
 - Replaces ordinary clothing with refined black or black-gold editorial wardrobe unless preservation is requested.
@@ -38,7 +38,7 @@ The people shown below are fictional and were generated specifically for this re
 - An available image-generation tool that supports image references or identity-preserving edits.
 - A clear portrait works best. Only use images you have permission to process.
 
-Image fidelity, pixel dimensions, and exact likeness depend on the available image model and the quality of the source portrait. A side-facing or lowered head can be reconstructed as a front, raised, three-quarter, or profile view, but unseen facial geometry must be inferred from a single image; additional angles improve reliability. The skill treats identity drift as a failed result and requests regeneration instead of accepting it. It also requests the highest native quality supported but cannot create detail absent from a very small or heavily compressed source.
+Image fidelity, pixel dimensions, and exact likeness depend on the available image model and the quality of the source portrait. A side-facing or lowered head can be reconstructed as a front, raised, three-quarter, or profile view, but unseen facial geometry must be inferred from a single image; additional angles improve reliability. To guarantee one visible result in Codex, the skill front-loads the full refinement brief into one image call rather than showing a first draft and a repair pass. A later user-requested revision can produce one replacement. The skill also requests the highest native quality supported but cannot create detail absent from a very small or heavily compressed source.
 
 ## Install
 
