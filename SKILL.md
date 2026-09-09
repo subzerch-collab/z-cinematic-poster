@@ -5,9 +5,11 @@ metadata:
   short-description: 将人物图做成高级感黑金海报或头像
 ---
 
-# z-cinematic-poster
+# Z·黑金电影海报
 
 Author: zero
+
+Skill ID: `z-cinematic-poster`
 
 Create a text-free, person-led black-gold cinematic editorial image from the user's portrait. Treat all visual rules below as defaults; do not make the user repeat them. Do not choose the canvas ratio on the user's behalf.
 

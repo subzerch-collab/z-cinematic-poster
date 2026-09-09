@@ -1,8 +1,10 @@
-# z-cinematic-poster
+# Z·黑金电影海报
 
 Turn a portrait into a polished black-gold cinematic image in a confirmed standard or custom aspect ratio while keeping the person recognizable and naturally integrated into the design.
 
 **Author:** zero
+
+**Skill ID:** `z-cinematic-poster`
 
 ## What it does
 
